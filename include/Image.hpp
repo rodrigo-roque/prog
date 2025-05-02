@@ -7,9 +7,10 @@
 namespace prog {
     class Image {
     private:
-		int width_value;
+    private:
+        int width_value;
         int height_value;
-        Color color_value;
+        std::vector<Color> pixels;
     
 	public:
         Image(int w, int h, const Color &fill = {255, 255, 255});
