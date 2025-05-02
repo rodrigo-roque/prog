@@ -2,12 +2,12 @@
 
 namespace prog {
     Image::Image(int w, int h, const Color &fill) {
-        width_value=w;
-        height_value=h;
+        width_value = w;
+        height_value = h;
         pixels = std::vector<Color>(w * h, fill);
     }
 
-    Image::~Image() {
+    Image::~Image() { // se eventualmente usarmos memoria alocada, tem que ser mudado
     }
 
     int Image::width() const {
