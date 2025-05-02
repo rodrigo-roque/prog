@@ -5,9 +5,9 @@ using std::istream;
 
 namespace prog {
     Color::Color() {
-        red_value=0;
-        green_value=0;
-        blue_value=0;
+        this->red_value=0;
+        this->green_value=0;
+        this->blue_value=0;
     }
 
     Color::Color(const Color &other) {
