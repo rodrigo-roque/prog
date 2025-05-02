@@ -8,9 +8,9 @@ namespace prog {
 
     class Color {
     private:
-        unsigned char red_value;
-        unsigned char green_value;
-        unsigned char blue_value;
+        rgb_value red_value;
+        rgb_value green_value;
+        rgb_value blue_value;
 
     public:
         Color();
