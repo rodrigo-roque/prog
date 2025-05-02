@@ -18,7 +18,6 @@ namespace prog {
         return height_value;
     }
 
-// dont understand what to do
     Color &Image::at(int x, int y) {
         return pixels[y * width_value + x];
     }

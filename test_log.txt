@@ -11,11 +11,7 @@ Applying command 'Save filename:output/basic_blank3.png'
 >>> [4] basic_open1 <<<
 Applying command 'Open filename:input/lion.png'
 Applying command 'Save filename:output/basic_open1.png'
-Images differ at pixel (100, 2)
-0 0 0 vs 255 255 255
 >>> [5] basic_open2 <<<
 Applying command 'Open filename:input/squares.png'
 Applying command 'Open filename:input/unionjack.png'
 Applying command 'Save filename:output/basic_open2.png'
-Images differ at pixel (1, 0)
-244 225 225 vs 219 134 137
