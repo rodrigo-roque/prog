@@ -5,39 +5,47 @@ using std::istream;
 
 namespace prog {
     Color::Color() {
+        red_value=0;
+        green_value=0;
+        blue_value=0;
     }
 
     Color::Color(const Color &other) {
+        red_value=other.red_value;
+        green_value=other.green_value;
+        blue_value=other.blue_value;
     }
 
     Color::Color(rgb_value red, rgb_value green, rgb_value blue) {
+        red_value=red;
+        green_value=green;
+        blue_value=blue;
     }
 
     rgb_value Color::red() const {
-        return 0;
+        return red_value;
     }
 
     rgb_value Color::green() const {
-        return 0;
+        return green_value;
     }
 
     rgb_value Color::blue() const {
-        return 0;
+        return blue_value;
     }
 
-    // TODO: remove this DUMMY variable once you have appropriate fields for representing colors.
-    rgb_value DUMMY_rgb_value = 0;
+
 
     rgb_value &Color::red() {
-        return DUMMY_rgb_value;
+        return red_value;
     }
 
     rgb_value &Color::green() {
-        return DUMMY_rgb_value;
+        return green_value;
     }
 
     rgb_value &Color::blue() {
-        return DUMMY_rgb_value;
+        return blue_value;
     }
 }
 
