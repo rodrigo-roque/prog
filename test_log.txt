@@ -108,21 +108,22 @@ Command not recognized: 'fill'
 Error while parsing command
 Scrim parse failed
 >>> [29] h_mirror1 <<<
-Command not recognized: 'h_mirror'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/symmetric.png'
+Applying command 'h_mirror'
+Applying command 'Save filename:output/h_mirror1.png'
 >>> [30] h_mirror2 <<<
-Command not recognized: 'h_mirror'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/symmetric.png'
+Applying command 'h_mirror'
+Applying command 'h_mirror'
+Applying command 'Save filename:output/h_mirror2.png'
 >>> [31] h_mirror3 <<<
-Command not recognized: 'h_mirror'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/escher-hands.png'
+Applying command 'h_mirror'
+Applying command 'Save filename:output/h_mirror3.png'
 >>> [32] h_mirror4 <<<
-Command not recognized: 'h_mirror'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/escher-reptiles.png'
+Applying command 'h_mirror'
+Applying command 'Save filename:output/h_mirror4.png'
 >>> [33] invert1 <<<
 Applying command 'Open filename:input/xkcd.png'
 Applying command 'invert'
@@ -157,17 +158,18 @@ Command not recognized: 'move'
 Error while parsing command
 Scrim parse failed
 >>> [41] replace1 <<<
-Command not recognized: 'replace'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/pacman.png'
+Applying command 'Replace'
+Applying command 'Save filename:output/replace1.png'
 >>> [42] replace2 <<<
-Command not recognized: 'replace'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/lion.png'
+Applying command 'Replace'
+Applying command 'Save filename:output/replace2.png'
 >>> [43] replace3 <<<
-Command not recognized: 'replace'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/dali.png'
+Applying command 'Replace'
+Applying command 'Replace'
+Applying command 'Save filename:output/replace3.png'
 >>> [44] resize1 <<<
 Command not recognized: 'resize'
 Error while parsing command
@@ -258,18 +260,19 @@ Applying command 'Open filename:input/mandelbrot.png'
 Applying command 'to_gray_scale'
 Applying command 'Save filename:output/to_gray_scale4.png'
 >>> [66] v_mirror1 <<<
-Command not recognized: 'v_mirror'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/symmetric.png'
+Applying command 'v_mirror'
+Applying command 'Save filename:output/v_mirror1.png'
 >>> [67] v_mirror2 <<<
-Command not recognized: 'v_mirror'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/symmetric.png'
+Applying command 'v_mirror'
+Applying command 'v_mirror'
+Applying command 'Save filename:output/v_mirror2.png'
 >>> [68] v_mirror3 <<<
-Command not recognized: 'v_mirror'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/escher-hands.png'
+Applying command 'v_mirror'
+Applying command 'Save filename:output/v_mirror3.png'
 >>> [69] v_mirror4 <<<
-Command not recognized: 'v_mirror'
-Error while parsing command
-Scrim parse failed
+Applying command 'Open filename:input/escher-angels-demons.png'
+Applying command 'v_mirror'
+Applying command 'Save filename:output/v_mirror4.png'

@@ -1,0 +1,4 @@
+Cannot generate into \\wsl$\Ubuntu\home\tiagorodrigues\prog\cmake-build-debug
+It is already used for project \home\francisco\prog
+
+Please either delete it manually or select another generation directory

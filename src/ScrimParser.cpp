@@ -8,6 +8,9 @@
 #include "Command/Open.hpp"
 #include "Command/Invert.hpp"
 #include "Command/To_gray_scale.hpp"
+#include "Command/Replace.hpp"
+#include "Command/H_Mirror.hpp"
+#include "Command/V_Mirror.hpp"
 #include "Logger.hpp"
 
 #include <fstream>
@@ -65,7 +68,6 @@ namespace prog {
 
         if (command_name == "blank") {
             // Read information for Blank command
-
             int w, h;
             Color fill;
             input >> w >> h >> fill;
@@ -91,6 +93,21 @@ namespace prog {
 
         if (command_name == "to_gray_scale") {
             return new command::Gray();
+        }
+
+        if (command_name == "replace") {
+            Color to_fill;
+            Color base;
+            input >> base >>to_fill;
+            return new command::Replace(base, to_fill);
+        }
+
+        if (command_name == "h_mirror") {
+            return new command::HMirror();
+        }
+
+        if (command_name == "v_mirror") {
+            return new command::VMirror();
         }
 
         // TODO: implement cases for the new commands
