@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/francisco/prog/include
 
-CXX_FLAGS =  -g -Wall -pedantic -Wuninitialized -Werror -fsanitize=address -fsanitize=undefined -std=c++17  -g
+CXX_FLAGS =  -g -Wall -pedantic -Wuninitialized -Werror -fsanitize=address -fsanitize=undefined -std=c++17 
 

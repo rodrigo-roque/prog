@@ -163,4 +163,6 @@ CMakeFiles/runscrim.dir/src/ScrimParser.cpp.o: \
  /home/francisco/prog/include/Color.hpp \
  /home/francisco/prog/include/Command/Save.hpp \
  /home/francisco/prog/include/Command/Open.hpp \
+ /home/francisco/prog/include/Command/Invert.hpp \
+ /home/francisco/prog/include/Command/To_gray_scale.hpp \
  /home/francisco/prog/include/Logger.hpp

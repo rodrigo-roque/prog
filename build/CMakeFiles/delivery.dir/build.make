@@ -72,8 +72,10 @@ delivery.zip: ../include
 delivery.zip: ../src/Color.cpp
 delivery.zip: ../src/Command.cpp
 delivery.zip: ../src/Command/Blank.cpp
+delivery.zip: ../src/Command/Invert.cpp
 delivery.zip: ../src/Command/Open.cpp
 delivery.zip: ../src/Command/Save.cpp
+delivery.zip: ../src/Command/To_gray_scale.cpp
 delivery.zip: ../src/Image.cpp
 delivery.zip: ../src/Logger.cpp
 delivery.zip: ../src/PNG.cpp
@@ -81,7 +83,7 @@ delivery.zip: ../src/Scrim.cpp
 delivery.zip: ../src/ScrimParser.cpp
 delivery.zip: ../src/Utils.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/francisco/prog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Creating zip archive: /home/francisco/prog/build/delivery.zip"
-	cd /home/francisco/prog && /usr/bin/cmake -E tar cf /home/francisco/prog/build/delivery.zip --format=zip /home/francisco/prog/include /home/francisco/prog/src/Color.cpp /home/francisco/prog/src/Command.cpp /home/francisco/prog/src/Command/Blank.cpp /home/francisco/prog/src/Command/Open.cpp /home/francisco/prog/src/Command/Save.cpp /home/francisco/prog/src/Image.cpp /home/francisco/prog/src/Logger.cpp /home/francisco/prog/src/PNG.cpp /home/francisco/prog/src/Scrim.cpp /home/francisco/prog/src/ScrimParser.cpp /home/francisco/prog/src/Utils.cpp
+	cd /home/francisco/prog && /usr/bin/cmake -E tar cf /home/francisco/prog/build/delivery.zip --format=zip /home/francisco/prog/include /home/francisco/prog/src/Color.cpp /home/francisco/prog/src/Command.cpp /home/francisco/prog/src/Command/Blank.cpp /home/francisco/prog/src/Command/Invert.cpp /home/francisco/prog/src/Command/Open.cpp /home/francisco/prog/src/Command/Save.cpp /home/francisco/prog/src/Command/To_gray_scale.cpp /home/francisco/prog/src/Image.cpp /home/francisco/prog/src/Logger.cpp /home/francisco/prog/src/PNG.cpp /home/francisco/prog/src/Scrim.cpp /home/francisco/prog/src/ScrimParser.cpp /home/francisco/prog/src/Utils.cpp
 
 delivery: CMakeFiles/delivery
 delivery: delivery.zip

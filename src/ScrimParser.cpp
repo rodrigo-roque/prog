@@ -6,6 +6,8 @@
 #include "Command/Blank.hpp"
 #include "Command/Save.hpp"
 #include "Command/Open.hpp"
+#include "Command/Invert.hpp"
+#include "Command/To_gray_scale.hpp"
 #include "Logger.hpp"
 
 #include <fstream>
@@ -34,7 +36,7 @@ namespace prog {
         string command_name;
         while (input >> command_name) {
             Command *command = parse_command(command_name, input);
-
+            
             if (command == nullptr) {
                 // Deallocate already allocated commands
                 for (Command *allocated_command: commands) {
@@ -60,8 +62,10 @@ namespace prog {
     }
 
     Command *ScrimParser::parse_command(string command_name, istream &input) {
+
         if (command_name == "blank") {
             // Read information for Blank command
+
             int w, h;
             Color fill;
             input >> w >> h >> fill;
@@ -79,6 +83,14 @@ namespace prog {
             string filename;
             input >> filename;
             return new command::Open(filename);
+        }
+
+        if (command_name == "invert") {
+            return new command::Invert();
+        }
+
+        if (command_name == "to_gray_scale") {
+            return new command::Gray();
         }
 
         // TODO: implement cases for the new commands

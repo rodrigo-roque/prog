@@ -10,28 +10,22 @@ namespace prog {
 
     namespace command {
 
-        Invert::Invert(rgb_value inv_r, rgb_value inv_g, rgb_value inv_b){
-            red_value = 255red_value;
-            green_value = other.green_value;
-            blue_value = other.blue_value;
+        Invert::Invert() : Command("invert") {}
+
+        Invert::~Invert() {}
+
+        Image *Invert::apply(Image *img) {
+            int w = img->width(); // Guarda a largura da imagem
+            int h = img->height(); // Guarda a altura da imagem
+            for (int y = 0; y < h; y++) { //percorre os pixeis da imagem linha por linha e inverte as cores de cada um
+                for (int x = 0; x < w; x++) {
+                    Color &c = img->at(x, y); // Acede ao pixel na posição (x, y)
+                    c.red() = 255 - c.red();
+                    c.green() = 255 - c.green();
+                    c.blue() = 255 - c.blue();
+                }
+            }
+            return img;
         }
-
-        Blank::~Blank() {};
-
-        Image *Blank::apply(Image *img) {
-
-            // Dispose of given image
-            delete img;
-
-            return new Image(w, h, fill);
-        }
-
-
-        std::string Blank::toString() const {
-            std::ostringstream ss;
-            ss << name() << " w:" << w << " h:" << h << " fill:" << fill;
-            return ss.str();
-        }
-
     }
 }
