@@ -17,6 +17,7 @@
 #include "Command/V_Mirror.hpp"
 #include "Command/Move.hpp"
 #include "Command/Slide.hpp"
+#include "Command/Add.hpp"
 
 
 #include "Command/Crop.hpp"
@@ -167,6 +168,14 @@ namespace prog {
             int x, y;
             input >> x >> y;
             return new command::Slide(x, y);
+        }
+
+        if (command_name == "add") {
+            string filename;
+            Color neutral;
+            int x, y;
+            input >> filename >> neutral >> x >> y;
+            return new command::Add(filename,neutral, x, y );
         }
 
         // TODO: implement cases for the new commands

@@ -12,7 +12,7 @@ namespace prog {
     namespace command {
         class Add : public Command {
         public:
-            Add(std::string filename, int x, int y, Color &fill);
+            Add(std::string filename, Color &neutral, int x, int y);
 
             ~Add();
 
@@ -22,8 +22,9 @@ namespace prog {
 
         private:
             std::string filename;
+            Color neutral;
             int x, y;
-            Color fill;
+
         };
     }
 }
