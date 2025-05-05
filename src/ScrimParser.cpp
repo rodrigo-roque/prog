@@ -9,8 +9,16 @@
 #include "Command/Invert.hpp"
 #include "Command/To_gray_scale.hpp"
 #include "Command/Replace.hpp"
+#include "Command/Fill.hpp"
 #include "Command/H_Mirror.hpp"
 #include "Command/V_Mirror.hpp"
+
+#include "Command/Crop.hpp"
+#include "Command/Resize.hpp"
+#include "Command/Rotate_Left.hpp"
+#include "Command/Rotate_Right.hpp"
+#include "Command/Scaleup.hpp"
+
 #include "Logger.hpp"
 
 #include <fstream>
@@ -108,6 +116,39 @@ namespace prog {
 
         if (command_name == "v_mirror") {
             return new command::VMirror();
+        }
+
+        if (command_name == "fill") {
+            int x, y, w, h;
+            Color RGB_value;
+            input >> x >> y >> w >> h >> RGB_value;
+            return new command::Fill(x, y, w, h, RGB_value);
+        }
+
+        if (command_name == "crop") {
+            int x, y, w, h;
+            input >> x >> y >> w >> h;
+            return new command::Crop(x, y, w, h);
+        }
+
+        if (command_name == "resize") {
+            int x, y, w, h;
+            input >> x >> y >> w >> h;
+            return new command::Resize(x, y, w, h);
+        }
+
+        if (command_name == "rotate_left") {
+            return new command::R_Left();
+        }
+
+        if (command_name == "rotate_right") {
+            return new command::R_Right();
+        }
+
+        if (command_name == "scaleup") {
+            int x, y;
+            input >> x >> y;
+            return new command::Scaleup(x, y);
         }
 
         // TODO: implement cases for the new commands
