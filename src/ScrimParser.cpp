@@ -11,6 +11,8 @@
 #include "Command/Replace.hpp"
 #include "Command/H_Mirror.hpp"
 #include "Command/V_Mirror.hpp"
+#include "Command/Move.hpp"
+#include "Command/Slide.hpp"
 #include "Logger.hpp"
 
 #include <fstream>
@@ -108,6 +110,18 @@ namespace prog {
 
         if (command_name == "v_mirror") {
             return new command::VMirror();
+        }
+
+        if (command_name == "move") {
+            int x, y;
+            input >> x >> y;
+            return new command::Move(x, y);
+        }
+
+        if (command_name == "slide") {
+            int x, y;
+            input >> x >> y;
+            return new command::Slide(x, y);
         }
 
         // TODO: implement cases for the new commands
