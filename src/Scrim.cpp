@@ -33,4 +33,6 @@ namespace prog {
     std::vector<Command *> Scrim::getCommands() const {
         return commands;
     }
+
+    std::vector<Command *> chain() {}
 }
