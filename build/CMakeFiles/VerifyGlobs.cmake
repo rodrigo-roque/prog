@@ -3,26 +3,35 @@
 cmake_policy(SET CMP0009 NEW)
 
 # SOURCES_BASE at CMakeLists.txt:18 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/tiagorodrigues/prog/src/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/rodrigo_roque/project/src/*.cpp")
 set(OLD_GLOB
-  "/home/tiagorodrigues/prog/src/Color.cpp"
-  "/home/tiagorodrigues/prog/src/Command.cpp"
-  "/home/tiagorodrigues/prog/src/Command/Blank.cpp"
-  "/home/tiagorodrigues/prog/src/Command/H_Mirror.cpp"
-  "/home/tiagorodrigues/prog/src/Command/Invert.cpp"
-  "/home/tiagorodrigues/prog/src/Command/Open.cpp"
-  "/home/tiagorodrigues/prog/src/Command/Replace.cpp"
-  "/home/tiagorodrigues/prog/src/Command/Save.cpp"
-  "/home/tiagorodrigues/prog/src/Command/To_gray_scale.cpp"
-  "/home/tiagorodrigues/prog/src/Command/V_Mirror.cpp"
-  "/home/tiagorodrigues/prog/src/Image.cpp"
-  "/home/tiagorodrigues/prog/src/Logger.cpp"
-  "/home/tiagorodrigues/prog/src/PNG.cpp"
-  "/home/tiagorodrigues/prog/src/Scrim.cpp"
-  "/home/tiagorodrigues/prog/src/ScrimParser.cpp"
-  "/home/tiagorodrigues/prog/src/Utils.cpp"
+  "/home/rodrigo_roque/project/src/Color.cpp"
+  "/home/rodrigo_roque/project/src/Command.cpp"
+  "/home/rodrigo_roque/project/src/Command/Add.cpp"
+  "/home/rodrigo_roque/project/src/Command/Blank.cpp"
+  "/home/rodrigo_roque/project/src/Command/Crop.cpp"
+  "/home/rodrigo_roque/project/src/Command/Fill.cpp"
+  "/home/rodrigo_roque/project/src/Command/H_Mirror.cpp"
+  "/home/rodrigo_roque/project/src/Command/Invert.cpp"
+  "/home/rodrigo_roque/project/src/Command/Move.cpp"
+  "/home/rodrigo_roque/project/src/Command/Open.cpp"
+  "/home/rodrigo_roque/project/src/Command/Replace.cpp"
+  "/home/rodrigo_roque/project/src/Command/Resize.cpp"
+  "/home/rodrigo_roque/project/src/Command/Rotate_Left.cpp"
+  "/home/rodrigo_roque/project/src/Command/Rotate_Right.cpp"
+  "/home/rodrigo_roque/project/src/Command/Save.cpp"
+  "/home/rodrigo_roque/project/src/Command/Scaleup.cpp"
+  "/home/rodrigo_roque/project/src/Command/Slide.cpp"
+  "/home/rodrigo_roque/project/src/Command/To_gray_scale.cpp"
+  "/home/rodrigo_roque/project/src/Command/V_Mirror.cpp"
+  "/home/rodrigo_roque/project/src/Image.cpp"
+  "/home/rodrigo_roque/project/src/Logger.cpp"
+  "/home/rodrigo_roque/project/src/PNG.cpp"
+  "/home/rodrigo_roque/project/src/Scrim.cpp"
+  "/home/rodrigo_roque/project/src/ScrimParser.cpp"
+  "/home/rodrigo_roque/project/src/Utils.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/home/tiagorodrigues/prog/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/home/rodrigo_roque/project/build/CMakeFiles/cmake.verify_globs")
 endif()

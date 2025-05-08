@@ -1,6 +1,6 @@
 CMakeFiles/runscrim.dir/src/PNG.cpp.o: \
- /home/tiagorodrigues/prog/src/PNG.cpp /usr/include/stdc-predef.h \
- /home/tiagorodrigues/prog/include/PNG.hpp /usr/include/c++/13/string \
+ /home/rodrigo_roque/project/src/PNG.cpp /usr/include/stdc-predef.h \
+ /home/rodrigo_roque/project/include/PNG.hpp /usr/include/c++/13/string \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -152,13 +152,13 @@ CMakeFiles/runscrim.dir/src/PNG.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/tiagorodrigues/prog/include/Image.hpp \
- /home/tiagorodrigues/prog/include/Color.hpp /usr/include/c++/13/vector \
+ /home/rodrigo_roque/project/include/Image.hpp \
+ /home/rodrigo_roque/project/include/Color.hpp /usr/include/c++/13/vector \
  /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/tiagorodrigues/prog/include/stb/stb_image.h \
+ /home/rodrigo_roque/project/include/stb/stb_image.h \
  /usr/include/c++/13/stdlib.h /usr/include/string.h \
  /usr/include/strings.h /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
@@ -198,9 +198,9 @@ CMakeFiles/runscrim.dir/src/PNG.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
- /home/tiagorodrigues/prog/include/Logger.hpp /usr/include/c++/13/fstream \
- /usr/include/c++/13/bits/codecvt.h \
+ /home/rodrigo_roque/project/include/Logger.hpp \
+ /usr/include/c++/13/fstream /usr/include/c++/13/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc \
- /home/tiagorodrigues/prog/include/stb/stb_image_write.h
+ /home/rodrigo_roque/project/include/stb/stb_image_write.h

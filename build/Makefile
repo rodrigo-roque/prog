@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tiagorodrigues/prog
+CMAKE_SOURCE_DIR = /home/rodrigo_roque/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tiagorodrigues/prog/build
+CMAKE_BINARY_DIR = /home/rodrigo_roque/project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tiagorodrigues/prog/build/CMakeFiles /home/tiagorodrigues/prog/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rodrigo_roque/project/build/CMakeFiles /home/rodrigo_roque/project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tiagorodrigues/prog/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rodrigo_roque/project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -113,7 +113,7 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /home/tiagorodrigues/prog/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/rodrigo_roque/project/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -258,6 +258,33 @@ src/Command.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command.cpp.s
 .PHONY : src/Command.cpp.s
 
+src/Command/Add.o: src/Command/Add.cpp.o
+.PHONY : src/Command/Add.o
+
+# target to build an object file
+src/Command/Add.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Add.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Add.cpp.o
+.PHONY : src/Command/Add.cpp.o
+
+src/Command/Add.i: src/Command/Add.cpp.i
+.PHONY : src/Command/Add.i
+
+# target to preprocess a source file
+src/Command/Add.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Add.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Add.cpp.i
+.PHONY : src/Command/Add.cpp.i
+
+src/Command/Add.s: src/Command/Add.cpp.s
+.PHONY : src/Command/Add.s
+
+# target to generate assembly for a file
+src/Command/Add.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Add.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Add.cpp.s
+.PHONY : src/Command/Add.cpp.s
+
 src/Command/Blank.o: src/Command/Blank.cpp.o
 .PHONY : src/Command/Blank.o
 
@@ -284,6 +311,60 @@ src/Command/Blank.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Blank.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Blank.cpp.s
 .PHONY : src/Command/Blank.cpp.s
+
+src/Command/Crop.o: src/Command/Crop.cpp.o
+.PHONY : src/Command/Crop.o
+
+# target to build an object file
+src/Command/Crop.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Crop.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Crop.cpp.o
+.PHONY : src/Command/Crop.cpp.o
+
+src/Command/Crop.i: src/Command/Crop.cpp.i
+.PHONY : src/Command/Crop.i
+
+# target to preprocess a source file
+src/Command/Crop.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Crop.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Crop.cpp.i
+.PHONY : src/Command/Crop.cpp.i
+
+src/Command/Crop.s: src/Command/Crop.cpp.s
+.PHONY : src/Command/Crop.s
+
+# target to generate assembly for a file
+src/Command/Crop.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Crop.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Crop.cpp.s
+.PHONY : src/Command/Crop.cpp.s
+
+src/Command/Fill.o: src/Command/Fill.cpp.o
+.PHONY : src/Command/Fill.o
+
+# target to build an object file
+src/Command/Fill.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Fill.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Fill.cpp.o
+.PHONY : src/Command/Fill.cpp.o
+
+src/Command/Fill.i: src/Command/Fill.cpp.i
+.PHONY : src/Command/Fill.i
+
+# target to preprocess a source file
+src/Command/Fill.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Fill.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Fill.cpp.i
+.PHONY : src/Command/Fill.cpp.i
+
+src/Command/Fill.s: src/Command/Fill.cpp.s
+.PHONY : src/Command/Fill.s
+
+# target to generate assembly for a file
+src/Command/Fill.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Fill.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Fill.cpp.s
+.PHONY : src/Command/Fill.cpp.s
 
 src/Command/H_Mirror.o: src/Command/H_Mirror.cpp.o
 .PHONY : src/Command/H_Mirror.o
@@ -339,6 +420,33 @@ src/Command/Invert.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Invert.cpp.s
 .PHONY : src/Command/Invert.cpp.s
 
+src/Command/Move.o: src/Command/Move.cpp.o
+.PHONY : src/Command/Move.o
+
+# target to build an object file
+src/Command/Move.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Move.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Move.cpp.o
+.PHONY : src/Command/Move.cpp.o
+
+src/Command/Move.i: src/Command/Move.cpp.i
+.PHONY : src/Command/Move.i
+
+# target to preprocess a source file
+src/Command/Move.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Move.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Move.cpp.i
+.PHONY : src/Command/Move.cpp.i
+
+src/Command/Move.s: src/Command/Move.cpp.s
+.PHONY : src/Command/Move.s
+
+# target to generate assembly for a file
+src/Command/Move.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Move.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Move.cpp.s
+.PHONY : src/Command/Move.cpp.s
+
 src/Command/Open.o: src/Command/Open.cpp.o
 .PHONY : src/Command/Open.o
 
@@ -393,6 +501,87 @@ src/Command/Replace.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Replace.cpp.s
 .PHONY : src/Command/Replace.cpp.s
 
+src/Command/Resize.o: src/Command/Resize.cpp.o
+.PHONY : src/Command/Resize.o
+
+# target to build an object file
+src/Command/Resize.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Resize.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Resize.cpp.o
+.PHONY : src/Command/Resize.cpp.o
+
+src/Command/Resize.i: src/Command/Resize.cpp.i
+.PHONY : src/Command/Resize.i
+
+# target to preprocess a source file
+src/Command/Resize.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Resize.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Resize.cpp.i
+.PHONY : src/Command/Resize.cpp.i
+
+src/Command/Resize.s: src/Command/Resize.cpp.s
+.PHONY : src/Command/Resize.s
+
+# target to generate assembly for a file
+src/Command/Resize.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Resize.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Resize.cpp.s
+.PHONY : src/Command/Resize.cpp.s
+
+src/Command/Rotate_Left.o: src/Command/Rotate_Left.cpp.o
+.PHONY : src/Command/Rotate_Left.o
+
+# target to build an object file
+src/Command/Rotate_Left.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Rotate_Left.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Rotate_Left.cpp.o
+.PHONY : src/Command/Rotate_Left.cpp.o
+
+src/Command/Rotate_Left.i: src/Command/Rotate_Left.cpp.i
+.PHONY : src/Command/Rotate_Left.i
+
+# target to preprocess a source file
+src/Command/Rotate_Left.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Rotate_Left.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Rotate_Left.cpp.i
+.PHONY : src/Command/Rotate_Left.cpp.i
+
+src/Command/Rotate_Left.s: src/Command/Rotate_Left.cpp.s
+.PHONY : src/Command/Rotate_Left.s
+
+# target to generate assembly for a file
+src/Command/Rotate_Left.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Rotate_Left.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Rotate_Left.cpp.s
+.PHONY : src/Command/Rotate_Left.cpp.s
+
+src/Command/Rotate_Right.o: src/Command/Rotate_Right.cpp.o
+.PHONY : src/Command/Rotate_Right.o
+
+# target to build an object file
+src/Command/Rotate_Right.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Rotate_Right.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Rotate_Right.cpp.o
+.PHONY : src/Command/Rotate_Right.cpp.o
+
+src/Command/Rotate_Right.i: src/Command/Rotate_Right.cpp.i
+.PHONY : src/Command/Rotate_Right.i
+
+# target to preprocess a source file
+src/Command/Rotate_Right.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Rotate_Right.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Rotate_Right.cpp.i
+.PHONY : src/Command/Rotate_Right.cpp.i
+
+src/Command/Rotate_Right.s: src/Command/Rotate_Right.cpp.s
+.PHONY : src/Command/Rotate_Right.s
+
+# target to generate assembly for a file
+src/Command/Rotate_Right.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Rotate_Right.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Rotate_Right.cpp.s
+.PHONY : src/Command/Rotate_Right.cpp.s
+
 src/Command/Save.o: src/Command/Save.cpp.o
 .PHONY : src/Command/Save.o
 
@@ -419,6 +608,60 @@ src/Command/Save.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Save.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Save.cpp.s
 .PHONY : src/Command/Save.cpp.s
+
+src/Command/Scaleup.o: src/Command/Scaleup.cpp.o
+.PHONY : src/Command/Scaleup.o
+
+# target to build an object file
+src/Command/Scaleup.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Scaleup.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Scaleup.cpp.o
+.PHONY : src/Command/Scaleup.cpp.o
+
+src/Command/Scaleup.i: src/Command/Scaleup.cpp.i
+.PHONY : src/Command/Scaleup.i
+
+# target to preprocess a source file
+src/Command/Scaleup.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Scaleup.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Scaleup.cpp.i
+.PHONY : src/Command/Scaleup.cpp.i
+
+src/Command/Scaleup.s: src/Command/Scaleup.cpp.s
+.PHONY : src/Command/Scaleup.s
+
+# target to generate assembly for a file
+src/Command/Scaleup.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Scaleup.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Scaleup.cpp.s
+.PHONY : src/Command/Scaleup.cpp.s
+
+src/Command/Slide.o: src/Command/Slide.cpp.o
+.PHONY : src/Command/Slide.o
+
+# target to build an object file
+src/Command/Slide.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Slide.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Slide.cpp.o
+.PHONY : src/Command/Slide.cpp.o
+
+src/Command/Slide.i: src/Command/Slide.cpp.i
+.PHONY : src/Command/Slide.i
+
+# target to preprocess a source file
+src/Command/Slide.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Slide.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Slide.cpp.i
+.PHONY : src/Command/Slide.cpp.i
+
+src/Command/Slide.s: src/Command/Slide.cpp.s
+.PHONY : src/Command/Slide.s
+
+# target to generate assembly for a file
+src/Command/Slide.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runscrim.dir/build.make CMakeFiles/runscrim.dir/src/Command/Slide.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tester.dir/build.make CMakeFiles/tester.dir/src/Command/Slide.cpp.s
+.PHONY : src/Command/Slide.cpp.s
 
 src/Command/To_gray_scale.o: src/Command/To_gray_scale.cpp.o
 .PHONY : src/Command/To_gray_scale.o
@@ -659,24 +902,51 @@ help:
 	@echo "... src/Command.o"
 	@echo "... src/Command.i"
 	@echo "... src/Command.s"
+	@echo "... src/Command/Add.o"
+	@echo "... src/Command/Add.i"
+	@echo "... src/Command/Add.s"
 	@echo "... src/Command/Blank.o"
 	@echo "... src/Command/Blank.i"
 	@echo "... src/Command/Blank.s"
+	@echo "... src/Command/Crop.o"
+	@echo "... src/Command/Crop.i"
+	@echo "... src/Command/Crop.s"
+	@echo "... src/Command/Fill.o"
+	@echo "... src/Command/Fill.i"
+	@echo "... src/Command/Fill.s"
 	@echo "... src/Command/H_Mirror.o"
 	@echo "... src/Command/H_Mirror.i"
 	@echo "... src/Command/H_Mirror.s"
 	@echo "... src/Command/Invert.o"
 	@echo "... src/Command/Invert.i"
 	@echo "... src/Command/Invert.s"
+	@echo "... src/Command/Move.o"
+	@echo "... src/Command/Move.i"
+	@echo "... src/Command/Move.s"
 	@echo "... src/Command/Open.o"
 	@echo "... src/Command/Open.i"
 	@echo "... src/Command/Open.s"
 	@echo "... src/Command/Replace.o"
 	@echo "... src/Command/Replace.i"
 	@echo "... src/Command/Replace.s"
+	@echo "... src/Command/Resize.o"
+	@echo "... src/Command/Resize.i"
+	@echo "... src/Command/Resize.s"
+	@echo "... src/Command/Rotate_Left.o"
+	@echo "... src/Command/Rotate_Left.i"
+	@echo "... src/Command/Rotate_Left.s"
+	@echo "... src/Command/Rotate_Right.o"
+	@echo "... src/Command/Rotate_Right.i"
+	@echo "... src/Command/Rotate_Right.s"
 	@echo "... src/Command/Save.o"
 	@echo "... src/Command/Save.i"
 	@echo "... src/Command/Save.s"
+	@echo "... src/Command/Scaleup.o"
+	@echo "... src/Command/Scaleup.i"
+	@echo "... src/Command/Scaleup.s"
+	@echo "... src/Command/Slide.o"
+	@echo "... src/Command/Slide.i"
+	@echo "... src/Command/Slide.s"
 	@echo "... src/Command/To_gray_scale.o"
 	@echo "... src/Command/To_gray_scale.i"
 	@echo "... src/Command/To_gray_scale.s"
@@ -712,7 +982,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /home/tiagorodrigues/prog/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/rodrigo_roque/project/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

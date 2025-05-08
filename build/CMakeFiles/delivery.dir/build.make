@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tiagorodrigues/prog
+CMAKE_SOURCE_DIR = /home/rodrigo_roque/project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tiagorodrigues/prog/build
+CMAKE_BINARY_DIR = /home/rodrigo_roque/project/build
 
 # Utility rule file for delivery.
 
@@ -68,25 +68,34 @@ include CMakeFiles/delivery.dir/progress.make
 
 CMakeFiles/delivery: delivery.zip
 
-delivery.zip: /home/tiagorodrigues/prog/include
-delivery.zip: /home/tiagorodrigues/prog/src/Color.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Command.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Command/Blank.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Command/H_Mirror.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Command/Invert.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Command/Open.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Command/Replace.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Command/Save.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Command/To_gray_scale.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Command/V_Mirror.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Image.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Logger.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/PNG.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Scrim.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/ScrimParser.cpp
-delivery.zip: /home/tiagorodrigues/prog/src/Utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/tiagorodrigues/prog/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Creating zip archive: /home/tiagorodrigues/prog/build/delivery.zip"
-	cd /home/tiagorodrigues/prog && /usr/bin/cmake -E tar cf /home/tiagorodrigues/prog/build/delivery.zip --format=zip /home/tiagorodrigues/prog/include /home/tiagorodrigues/prog/src/Color.cpp /home/tiagorodrigues/prog/src/Command.cpp /home/tiagorodrigues/prog/src/Command/Blank.cpp /home/tiagorodrigues/prog/src/Command/H_Mirror.cpp /home/tiagorodrigues/prog/src/Command/Invert.cpp /home/tiagorodrigues/prog/src/Command/Open.cpp /home/tiagorodrigues/prog/src/Command/Replace.cpp /home/tiagorodrigues/prog/src/Command/Save.cpp /home/tiagorodrigues/prog/src/Command/To_gray_scale.cpp /home/tiagorodrigues/prog/src/Command/V_Mirror.cpp /home/tiagorodrigues/prog/src/Image.cpp /home/tiagorodrigues/prog/src/Logger.cpp /home/tiagorodrigues/prog/src/PNG.cpp /home/tiagorodrigues/prog/src/Scrim.cpp /home/tiagorodrigues/prog/src/ScrimParser.cpp /home/tiagorodrigues/prog/src/Utils.cpp
+delivery.zip: /home/rodrigo_roque/project/include
+delivery.zip: /home/rodrigo_roque/project/src/Color.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Add.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Blank.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Crop.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Fill.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/H_Mirror.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Invert.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Move.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Open.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Replace.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Resize.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Rotate_Left.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Rotate_Right.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Save.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Scaleup.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/Slide.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/To_gray_scale.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Command/V_Mirror.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Image.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Logger.cpp
+delivery.zip: /home/rodrigo_roque/project/src/PNG.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Scrim.cpp
+delivery.zip: /home/rodrigo_roque/project/src/ScrimParser.cpp
+delivery.zip: /home/rodrigo_roque/project/src/Utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/rodrigo_roque/project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Creating zip archive: /home/rodrigo_roque/project/build/delivery.zip"
+	cd /home/rodrigo_roque/project && /usr/bin/cmake -E tar cf /home/rodrigo_roque/project/build/delivery.zip --format=zip /home/rodrigo_roque/project/include /home/rodrigo_roque/project/src/Color.cpp /home/rodrigo_roque/project/src/Command.cpp /home/rodrigo_roque/project/src/Command/Add.cpp /home/rodrigo_roque/project/src/Command/Blank.cpp /home/rodrigo_roque/project/src/Command/Crop.cpp /home/rodrigo_roque/project/src/Command/Fill.cpp /home/rodrigo_roque/project/src/Command/H_Mirror.cpp /home/rodrigo_roque/project/src/Command/Invert.cpp /home/rodrigo_roque/project/src/Command/Move.cpp /home/rodrigo_roque/project/src/Command/Open.cpp /home/rodrigo_roque/project/src/Command/Replace.cpp /home/rodrigo_roque/project/src/Command/Resize.cpp /home/rodrigo_roque/project/src/Command/Rotate_Left.cpp /home/rodrigo_roque/project/src/Command/Rotate_Right.cpp /home/rodrigo_roque/project/src/Command/Save.cpp /home/rodrigo_roque/project/src/Command/Scaleup.cpp /home/rodrigo_roque/project/src/Command/Slide.cpp /home/rodrigo_roque/project/src/Command/To_gray_scale.cpp /home/rodrigo_roque/project/src/Command/V_Mirror.cpp /home/rodrigo_roque/project/src/Image.cpp /home/rodrigo_roque/project/src/Logger.cpp /home/rodrigo_roque/project/src/PNG.cpp /home/rodrigo_roque/project/src/Scrim.cpp /home/rodrigo_roque/project/src/ScrimParser.cpp /home/rodrigo_roque/project/src/Utils.cpp
 
 delivery: CMakeFiles/delivery
 delivery: delivery.zip
@@ -102,6 +111,6 @@ CMakeFiles/delivery.dir/clean:
 .PHONY : CMakeFiles/delivery.dir/clean
 
 CMakeFiles/delivery.dir/depend:
-	cd /home/tiagorodrigues/prog/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tiagorodrigues/prog /home/tiagorodrigues/prog /home/tiagorodrigues/prog/build /home/tiagorodrigues/prog/build /home/tiagorodrigues/prog/build/CMakeFiles/delivery.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/rodrigo_roque/project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rodrigo_roque/project /home/rodrigo_roque/project /home/rodrigo_roque/project/build /home/rodrigo_roque/project/build /home/rodrigo_roque/project/build/CMakeFiles/delivery.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/delivery.dir/depend
 

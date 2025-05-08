@@ -34,5 +34,8 @@ namespace prog {
         return commands;
     }
 
-    std::vector<Command *> chain() {}
+    std::vector<Command *> chain() {
+        return {}; // return an empty vector for now
+    }
+
 }

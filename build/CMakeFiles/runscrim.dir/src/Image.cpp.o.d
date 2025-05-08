@@ -1,8 +1,8 @@
 CMakeFiles/runscrim.dir/src/Image.cpp.o: \
- /home/tiagorodrigues/prog/src/Image.cpp /usr/include/stdc-predef.h \
- /home/tiagorodrigues/prog/include/Image.hpp \
- /home/tiagorodrigues/prog/include/Color.hpp /usr/include/c++/13/iostream \
- /usr/include/c++/13/bits/requires_hosted.h \
+ /home/rodrigo_roque/project/src/Image.cpp /usr/include/stdc-predef.h \
+ /home/rodrigo_roque/project/include/Image.hpp \
+ /home/rodrigo_roque/project/include/Color.hpp \
+ /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
