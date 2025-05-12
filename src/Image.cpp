@@ -29,6 +29,6 @@ namespace prog {
     }
 
     const Color &Image::at(int x, int y) const {
-        return pixels[y][x];
+        return pixels[y][x]; //ola
     }
 }
