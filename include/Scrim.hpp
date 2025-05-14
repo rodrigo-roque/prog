@@ -3,6 +3,7 @@
 
 #include "Command.hpp"
 #include "Image.hpp"
+#include "ScrimParser.hpp"
 #include <string>
 #include <fstream>
 
@@ -34,6 +35,7 @@ namespace prog {
          *
          * @return a reference to the commends
          */
+
         std::vector<Command *> getCommands() const;
 
         std::vector<Command *> chain() const;
