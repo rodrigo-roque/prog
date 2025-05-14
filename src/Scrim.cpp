@@ -4,6 +4,11 @@
 #include "Scrim.hpp"
 #include "Logger.hpp"
 
+using std::ifstream;
+using std::istream;
+using std::string;
+using std::vector;
+
 
 using prog::Command;
 
@@ -35,8 +40,5 @@ namespace prog {
         return commands;
     }
 
-    std::vector<Command *> chain() {
-        return {}; // return an empty vector for now
-    }
 
 }

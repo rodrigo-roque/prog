@@ -25,6 +25,7 @@
 #include "Command/Rotate_Left.hpp"
 #include "Command/Rotate_Right.hpp"
 #include "Command/Scaleup.hpp"
+#include "Command/Chain.hpp"
 
 #include "Logger.hpp"
 
@@ -49,10 +50,26 @@ namespace prog {
     Scrim *ScrimParser::parseScrim(std::istream &input) {
         // Create vector where commands will be stored
         vector<Command *> commands;
+        bool chaining= false;
 
         // Parse commands while there is input in the stream
         string command_name;
         while (input >> command_name) {
+        	if (command_name == "chain"){
+                chaining=true;
+          		vector <string> chained_scrims;
+          		string scrims;
+
+          		while (input >> scrims){
+            		if (scrims=="end") break;
+            		chained_scrims.push_back(scrims);
+          		}
+
+                for (auto current_scrim:chained_scrims){
+                  parseScrim(current_scrim);
+                }
+                chaining=false;
+        	}
             Command *command = parse_command(command_name, input);
 
             if (command == nullptr) {
@@ -66,7 +83,8 @@ namespace prog {
                 return nullptr;
             }
 
-            commands.push_back(command);
+            if (!chaining) commands.push_back(command);
+            else if (command_name!="save" && command_name!="open" && command_name!="blank") commands.push_back(command);
         }
 
         // Create a new image pipeline
@@ -177,6 +195,8 @@ namespace prog {
             input >> filename >> neutral >> x >> y;
             return new command::Add(filename,neutral, x, y );
         }
+
+
 
         // TODO: implement cases for the new commands
 
