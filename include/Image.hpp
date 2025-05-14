@@ -14,7 +14,7 @@ namespace prog {
 	public:
         Image(int w, int h, const Color &fill = {255, 255, 255});
 
-        ~Image(); //ola
+        ~Image();
 
         int width() const;
 
