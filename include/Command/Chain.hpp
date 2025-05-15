@@ -1,26 +1,22 @@
-//
-// Created by rodri on 15/05/2025.
-//
-
-#ifndef CHAIN_HPP
-#define CHAIN_HPP
+#ifndef PROJECT_CHAIN_HPP
+#define PROJECT_CHAIN_HPP
 
 #include "Command.hpp"
+#include <vector>
 #include <string>
-#include "Scrim.hpp"
 
 namespace prog {
     namespace command {
         class Chain : public Command {
         public:
-            Chain(std::vector <Scrim> scrims);
-
+            Chain(const std::vector<std::string>& files);
             ~Chain();
-
+            Image *apply(Image *img) override;
+            std::string toString() const override;
         private:
-            std::vector <Scrim> chained_scrims_;
-
+            std::vector<std::string> files;
         };
     }
 }
-#endif //CHAIN_HPP
+
+#endif //PROJECT_CHAIN_HPP 
