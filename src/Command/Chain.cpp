@@ -30,39 +30,36 @@ namespace prog {
                 ScrimParser parser;
                 Scrim* scrim = parser.parseScrim(file);
 
-                std::vector<Command*> cmds = scrim->getCommands();
-                for (size_t j = 0; j < cmds.size(); ++j) {
-                    Command* cmd = cmds[j];
-                    std::string n = cmd->name();
-                    if (n == "Save" || n == "Blank" || n == "Open") {
+                std::vector<Command*> commands = scrim->getCommands();
+                for (auto command:commands) {
+                    std::string command_name = command->name();
+                    if (command_name == "Save" || command_name == "Blank" || command_name == "Open") {
                         continue;
                     }
-                    if (n == "Chain") {
+                    if (command_name == "Chain") {
                         // Nested chain: create a new Chain and call apply recursively
-                        Chain* chain_cmd = (Chain*)cmd;
+                        Chain* chain_command = (Chain*)command;
                         // Add current call stack to nested call
-                        for (size_t k = 0; k < chain_cmd->files.size(); ++k) {
-                            std::string nested_file = chain_cmd->files[k];
+                        for (auto nested_file:  chain_command->files) {
                             if (already_used(used_files, nested_file)) {
                                 continue;
                             }
                             used_files.push_back(nested_file);
                             Scrim* nested_scrim = parser.parseScrim(nested_file);
                             if (nested_scrim) {
-                                std::vector<Command*> nested_cmds = nested_scrim->getCommands();
-                                for (size_t m = 0; m < nested_cmds.size(); ++m) {
-                                    Command* nested_cmd = nested_cmds[m];
-                                    std::string nn = nested_cmd->name();
-                                    if (nn == "Save" || nn == "Blank" || nn == "Open") continue;
-                                    if (nn == "Chain") continue; // Avoid deeper nesting for simplicity
-                                    img = nested_cmd->apply(img);
+                                std::vector<Command*> nested_commands = nested_scrim->getCommands();
+                                for (auto nested_command:nested_commands) {
+                                    std::string nested_command_name = nested_command->name();
+                                    if (nested_command_name == "Save" || nested_command_name == "Blank" || nested_command_name == "Open") continue;
+                                    if (nested_command_name == "Chain") continue; // Avoid deeper nesting for simplicity
+                                    img = nested_command->apply(img);
                                 }
                                 delete nested_scrim;
                             }
                             used_files.pop_back();
                         }
                     } else {
-                        img = cmd->apply(img);
+                        img = command->apply(img);
                     }
                 }
                 delete scrim;
