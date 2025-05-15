@@ -36,7 +36,7 @@ namespace prog {
          */
         std::vector<Command *> getCommands() const;
 
-        std::vector<Command *> chain() const;
+        //std::vector<Command *> chain() const;
 
     private:
         // Commands

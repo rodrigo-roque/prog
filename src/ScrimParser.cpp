@@ -25,6 +25,7 @@
 #include "Command/Rotate_Left.hpp"
 #include "Command/Rotate_Right.hpp"
 #include "Command/Scaleup.hpp"
+#include "Command/Chain.hpp"
 
 #include "Logger.hpp"
 
@@ -176,6 +177,17 @@ namespace prog {
             int x, y;
             input >> filename >> neutral >> x >> y;
             return new command::Add(filename,neutral, x, y );
+        }
+
+        if (command_name == "chain") {
+            std::vector<std::string> files;
+            std::string word;
+                // Multi-line chain: read one file per line until "end"
+            while (input >> word) {
+                if (word == "end") break;
+                files.push_back(word);
+            }
+            return new command::Chain(files);
         }
 
         // TODO: implement cases for the new commands
