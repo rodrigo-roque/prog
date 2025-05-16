@@ -11,9 +11,13 @@ namespace prog {
     namespace command {
         class VMirror : public Command {
         public:
+            //Contrutor padrão com o comando "v_mirror"
             VMirror();
+
+            //Destrutor
             ~VMirror() override;
 
+            //Função que implementa o comando "v_mirror"
             Image *apply(Image *img) override;
         };
     }

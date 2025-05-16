@@ -1,5 +1,5 @@
 //
-// Created by Utilizador on 03/05/2025.
+// Created by Tiago on 03/05/2025.
 //
 
 #ifndef PROJECT_H_MIRROR_HPP
@@ -11,9 +11,13 @@ namespace prog {
     namespace command {
         class HMirror : public Command {
         public:
+            //Contrutor padrão com o comando "h_mirror"
             HMirror();
+
+            //Destrutor
             ~HMirror() override;
 
+            //Função que implementa o comando "h_mirror"
             Image *apply(Image *img) override;
         };
     }

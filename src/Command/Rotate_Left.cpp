@@ -1,7 +1,6 @@
 //
 // Created by Tiago on 04/05/2025.
 //
-//Passou nos testes, mas tem MLeaks.
 
 #include "Command/Rotate_Left.hpp"
 #include "Image.hpp"
@@ -11,27 +10,31 @@
 namespace prog {
 
     namespace command {
-
+        //Contrutor padrão com o comando "rotate_left"
         R_Left::R_Left() : Command("rotate_left") {}
 
+        //Destrutor
         R_Left::~R_Left() {}
 
+        //Função que implementa o comando "rotate_left"
         Image *R_Left::apply(Image *img) {
             int w = img->width(); // Guarda a largura da imagem
             int h = img->height(); // Guarda a altura da imagem
+            //Troca do valores de altura e largura, pois a imagem é rodada
             int new_w = h; // Guarda a largura da nova imagem
             int new_h = w; // Guarda a altura da nova imagem
 
-            Image* original = img; //Criar uma imagem cópia da original, para não ter memory leaks
-            Image* rotate_left = new Image(new_w, new_h);
+            Image* rotated_left = new Image(new_w, new_h); //Nova imagem, onde são feitas as alterações pretendidas
 
-            for (int y = 0; y < h; y++) { //percorre os pixeis da imagem coluna por coluna, linha por linha
+            for (int y = 0; y < h; y++) { //Percorre os pixeis da imagem original coluna por coluna, linha por linha
                 for (int x = 0; x < w; x++) {
-                    rotate_left->at(y, new_h - 1 - x) = original->at(x, y); // Acede ao pixel na posição (x, y) da imagem rodada e altera para o valor da imagem inicial
+                    //A coluna da imagem nova será "y" e a linha da imagem nova será
+                    //(new_h - 1 - x), pois este é a posição espelhada horizontalmente à posição vertical original
+                    rotated_left->at(y, new_h - 1 - x) = img->at(x, y);
                 }
             }
-            delete original; //Apagar a cópia, para não ter memory leaks
-            return rotate_left;
+            delete img; //Apagar a cópia, para não ter memory leaks
+            return rotated_left; //Retornar a nova imagem, rodada 90º para a esquerda
         }
     }
 }

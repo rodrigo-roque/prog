@@ -104,58 +104,74 @@ namespace prog {
         }
 
         if (command_name == "invert") {
+            // Aplicação do comando "invert"
             return new command::Invert();
         }
 
         if (command_name == "to_gray_scale") {
+            // Aplicação do comando "to_gray_scale"
             return new command::Gray();
         }
 
         if (command_name == "replace") {
-            Color to_fill;
+            // Lê a informação do comando "replace"
+            Color nova_cor;
             Color base;
-            input >> base >>to_fill;
-            return new command::Replace(base, to_fill);
+            input >> base >>nova_cor;
+            // Aplicação do comando "replace"
+            return new command::Replace(base, nova_cor);
         }
 
         if (command_name == "h_mirror") {
+            // Aplicação do comando "h_mirror"
             return new command::HMirror();
         }
 
         if (command_name == "v_mirror") {
+            // Aplicação do comando "v_mirror"
             return new command::VMirror();
         }
 
         if (command_name == "fill") {
+            // Lê a informação do comando "fill"
             int x, y, w, h;
             Color RGB_value;
             input >> x >> y >> w >> h >> RGB_value;
+            // Aplicação do comando "fill"
             return new command::Fill(x, y, w, h, RGB_value);
         }
 
         if (command_name == "crop") {
+            // Lê a informação do comando "crop"
             int x, y, w, h;
             input >> x >> y >> w >> h;
+            // Aplicação do comando "crop"
             return new command::Crop(x, y, w, h);
         }
 
         if (command_name == "resize") {
+            // Lê a informação do comando "resize"
             int x, y, w, h;
             input >> x >> y >> w >> h;
+            // Aplicação do comando "resize"
             return new command::Resize(x, y, w, h);
         }
 
         if (command_name == "rotate_left") {
+            // Aplicação do comando "rotate_left"
             return new command::R_Left();
         }
 
         if (command_name == "rotate_right") {
+            // Aplicação do comando "rotate_right"
             return new command::R_Right();
         }
 
         if (command_name == "scaleup") {
+            // Lê a informação do comando "scaleup"
             int x, y;
             input >> x >> y;
+            // Aplicação do comando "scaleup"
             return new command::Scaleup(x, y);
         }
 
