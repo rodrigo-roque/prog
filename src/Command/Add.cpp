@@ -13,23 +13,23 @@
 namespace prog {
 
     namespace command {
+        //Construtor padrão com o comando "Add", ficheiro, cor neutra e posição x, y
         Add::Add(std::string filename, Color &neutral, int x, int y) : Command("Add"), filename(filename), neutral(neutral), x(x), y(y)   {}
 
+        //Destrutor
         Add::~Add() {};
 
+        //Função que implementa o comando "Add"
         Image *Add::apply(Image *img) {
+            Image *nova = loadFromPNG(filename); //Carrega a imagem a adicionar
+            int dest_w = img->width(); //Guarda a largura da imagem de destino
+            int dest_h = img->height(); //Guarda a altura da imagem de destino
+            int src_w = nova->width(); //Guarda a largura da imagem a adicionar
+            int src_h = nova->height(); //Guarda a altura da imagem a adicionar
 
-            // TODO:  fix rootpath
-            // img = loadFromPNG("../"+filename);
-            Image *nova = loadFromPNG(filename);
-            int dest_w = img->width();
-            int dest_h = img->height();
-            int src_w = nova->width();
-            int src_h = nova->height();
-
-            for (int j = 0; j < src_h; ++j) {
-                for (int i = 0; i < src_w; ++i) {
-                    Color pixel = nova->at(i, j);
+            for (int j = 0; j < src_h; ++j) { //Percorre as linhas da imagem que queremos adicionar
+                for (int i = 0; i < src_w; ++i) { //Percorre as colunas da imagem que queremos adicionar
+                    Color pixel = nova->at(i, j); //Obtém o pixel da mesma
 
                     // Ignora pixeis neutros
                     if (pixel.red() == neutral.red() && pixel.green() == neutral.green() && pixel.blue() == neutral.blue())
@@ -41,13 +41,14 @@ namespace prog {
 
                     // Verifica se está dentro dos limites da imagem de destino
                     if (dest_x >= 0 && dest_x < dest_w && dest_y >= 0 && dest_y < dest_h) {
-                        img->at(dest_x, dest_y) = pixel;
+                        img->at(dest_x, dest_y) = pixel; //Copia o pixel para a imagem de destino
                     }
                 }
             }
-            delete nova; // evita memory leak
-            return img;
+            delete nova; //Evita memory leak
+            return img; //Retorna a imagem de destino com a nova imagem adicionada
         }
+        //Função que converte o comando para string
         std::string Add::toString() const {
             std::ostringstream ss;
             ss << name() << " filename:" << filename << " neutral:" << neutral << " x:" << x << " y:" << y;
