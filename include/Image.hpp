@@ -7,21 +7,27 @@
 namespace prog {
     class Image {
     private:
-        int width_value;
-        int height_value;
-        std::vector <std::vector<Color>> pixels;
+        int width_value; //largura da imagem (nº de pixeis na horizontal)
+        int height_value; //altura da imagem (nº de pixeis na vertical)
+        std::vector <std::vector<Color>> pixels; //matriz de pixeis
     
 	public:
+        //Construtor padrão da imagem
         Image(int w, int h, const Color &fill = {255, 255, 255});
 
-        ~Image(); //ola
+        //Destrutor
+        ~Image();
 
+        //Acessor da largura
         int width() const;
 
+        //Acessor da altura
         int height() const;
 
+        //Acessor da cor num determinado pixel
         Color &at(int x, int y);
 
+        //Acessor da cor num determinado pixel (cconstante)
         const Color &at(int x, int y) const;
     };
 }
