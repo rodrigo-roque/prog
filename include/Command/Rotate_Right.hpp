@@ -11,13 +11,13 @@ namespace prog {
     namespace command {
         class R_Right : public Command {
         public:
-            //Contrutor padrão com o comando "rotate_right"
+            // Contrutor padrão com o comando "rotate_right"
             R_Right();
 
-            //Destrutor
+            // Destrutor
             ~R_Right() override;
 
-            //Função que implementa o comando "rotate_right"
+            // Função que implementa o comando "rotate_right"
             Image *apply(Image *img) override;
         };
     }

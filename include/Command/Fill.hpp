@@ -13,23 +13,23 @@ namespace prog {
     namespace command {
         class Fill : public Command {
         public:
-            //Contrutor padrão com o comando "fill"
+            // Contrutor padrão com o comando "fill"
             Fill(int x, int y, int w, int h, Color &RGB_values);
 
-            //Destrutor
+            // Destrutor
             ~Fill();
 
-            //Função que implementa o comando "fill"
+            // Função que implementa o comando "fill"
             Image *apply(Image *img) override;
 
-            //Função de conversão para string
+            // Função de conversão para string
             std::string toString() const override;
 
         private:
-            int x_; //Valor da coordenada x do pixel do canto superior esquerdo
-            int y_; //Valor da coordenada y do pixel do canto superior esquerdo
-            int w_; //Largura de limite de preenchimento
-            int h_; //Altura de limite de preenchimento
+            int x_; // Valor da coordenada x do pixel do canto superior esquerdo
+            int y_; // Valor da coordenada y do pixel do canto superior esquerdo
+            int w_; // Largura de limite de preenchimento
+            int h_; // Altura de limite de preenchimento
             Color RGB_values_; //Cor nova a alterar
         };
     }

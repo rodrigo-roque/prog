@@ -176,26 +176,33 @@ namespace prog {
         }
 
         if (command_name == "move") {
+            // Lê a informação do comando "move"
             int x, y;
             input >> x >> y;
+            // Aplicação do comando "move"
             return new command::Move(x, y);
         }
 
         if (command_name == "slide") {
+            // Lê a informação do comando "slide"
             int x, y;
             input >> x >> y;
+            // Aplicação do comando "slide"
             return new command::Slide(x, y);
         }
 
         if (command_name == "add") {
+            // Lê a informação do comando "add"
             string filename;
             Color neutral;
             int x, y;
             input >> filename >> neutral >> x >> y;
+            // Aplicação do comando "add"
             return new command::Add(filename,neutral, x, y );
         }
 
         if (command_name == "chain") {
+            // Lê a informação do comando "chain"
             std::vector<std::string> files;
             std::string word;
                 // Multi-line chain: read one file per line until "end"
@@ -203,6 +210,7 @@ namespace prog {
                 if (word == "end") break;
                 files.push_back(word);
             }
+            // Aplicação do comando "chain"
             return new command::Chain(files);
         }
 

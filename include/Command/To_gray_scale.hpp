@@ -11,13 +11,13 @@ namespace prog {
     namespace command {
         class Gray : public Command {
         public:
-            //Contrutor padrão com o comando "to_gray_scale"
+            // Contrutor padrão com o comando "to_gray_scale"
             Gray();
 
-            //Destrutor
+            // Destrutor
             ~Gray() override;
 
-            //Função que implementa o comando "to_gray_scale"
+            // Função que implementa o comando "to_gray_scale"
             Image *apply(Image *img) override;
         };
     }

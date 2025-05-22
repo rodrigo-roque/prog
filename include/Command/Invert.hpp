@@ -11,13 +11,13 @@ namespace prog {
     namespace command {
         class Invert : public Command {
         public:
-            //Contrutor padrão com o comando "invert"
+            // Contrutor padrão com o comando "invert"
             Invert();
 
-            //Destrutor
+            // Destrutor
             ~Invert() override;
 
-            //Função que implementa o comando "invert"
+            // Função que implementa o comando "invert"
             Image *apply(Image *img) override;
         };
     }

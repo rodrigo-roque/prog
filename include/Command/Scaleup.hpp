@@ -11,20 +11,20 @@ namespace prog {
     namespace command {
         class Scaleup : public Command {
         public:
-            //Contrutor padrão com o comando "scaleup"
+            // Contrutor padrão com o comando "scaleup"
             Scaleup(int x, int y);
 
-            //Destrutor
+            // Destrutor
             ~Scaleup() override;
 
-            //Função que implementa o comando "scaleup"
+            // Função que implementa o comando "scaleup"
             Image *apply(Image *img) override;
 
-            //Função de conversão para string
+            // Função de conversão para string
             std::string toString() const override;
 
         private:
-            int fator_x_, fator_y_; //Fator de crescimento de cada pixel da imagem
+            int fator_x_, fator_y_; // Fator de crescimento de cada pixel da imagem
         };
     }
 }

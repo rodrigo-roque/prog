@@ -12,21 +12,21 @@ namespace prog {
     namespace command {
         class Slide : public Command {
         public:
-            //Construtor padrão com o comando "slide" e deslocamentos x e y
+            // Construtor padrão com o comando "slide" e deslocamentos x e y
             Slide(int x, int y);
 
-            //Destrutor
+            // Destrutor
             ~Slide();
 
-            //Função que implementa o comando "slide"
+            // Função que implementa o comando "slide"
             Image* apply(Image* img) override;
 
-            //Função que converte o comando para string
+            // Função que converte o comando para string
             std::string toString() const override;
 
         private:
-            int x_offset; //Número de pixeis a deslizar circularmente para a direita (horizontalmente)
-            int y_offset; //Número de pixeis a deslizar circularmente para baixo (verticalmente)
+            int x_offset; // Número de pixeis a deslizar circularmente para a direita (horizontalmente)
+            int y_offset; // Número de pixeis a deslizar circularmente para baixo (verticalmente)
         };
     }
 }

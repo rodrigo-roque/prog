@@ -11,13 +11,13 @@ namespace prog {
     namespace command {
         class HMirror : public Command {
         public:
-            //Contrutor padrão com o comando "h_mirror"
+            // Contrutor padrão com o comando "h_mirror"
             HMirror();
 
-            //Destrutor
+            // Destrutor
             ~HMirror() override;
 
-            //Função que implementa o comando "h_mirror"
+            // Função que implementa o comando "h_mirror"
             Image *apply(Image *img) override;
         };
     }
