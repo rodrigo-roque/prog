@@ -12,24 +12,24 @@ namespace prog {
     namespace command {
 
         // Contrutor padrão com o comando "replace"
-        Replace::Replace(Color& base, Color &cor_nova) : Command("replace"), base_(base), nova_cor_(cor_nova) {}
+        Replace::Replace(Color& base_color, Color &new_color) : Command("Replace"), base_color_(base_color), new_color_(new_color) {}
 
         // Destrutor
         Replace::~Replace() {};
 
         // Função que implementa o comando "replace"
         Image *Replace::apply(Image *img) {
-            int w = img->width(); // Guarda a largura da imagem
-            int h = img->height(); // Guarda a altura da imagem
-            for (int y = 0; y < h; y++) { // Percorre os pixeis da imagem linha por linha, coluna por coluna
-                for (int x = 0; x < w; x++) {
+            int img_width = img->width(); // Guarda a largura da imagem
+            int img_height = img->height(); // Guarda a altura da imagem
+            for (int y = 0; y < img_height; y++) { // Percorre os pixeis da imagem linha por linha, coluna por coluna
+                for (int x = 0; x < img_width; x++) {
                     Color &c = img->at(x, y); // Acede ao pixel na posição (x, y)
                     // Verificar se o pixel tem os valores base (alvo a mudar se verdadeiro)
-                    if (c.red() == base_.red() && c.green() == base_.green() && c.blue() == base_.blue()) {
+                    if (c.red() == base_color_.red() && c.green() == base_color_.green() && c.blue() == base_color_.blue()) {
                         // Atualiza os componentes de cor do objeto "c", com os valores da cor nova "nova_cor"
-                        c.red() = nova_cor_.red();
-                        c.green() = nova_cor_.green();
-                        c.blue() = nova_cor_.blue();
+                        c.red() = new_color_.red();
+                        c.green() = new_color_.green();
+                        c.blue() = new_color_.blue();
                     }
                 }
             }
@@ -39,7 +39,7 @@ namespace prog {
         // Função de conversão para string
         std::string Replace::toString() const {
             std::ostringstream ss;
-            ss << name() << " base:" << base_ << " cor nova:" << nova_cor_;
+            ss << name() << " base_color:" << base_color_ << " new_color:" << new_color_;
             return ss.str();
         }
     }

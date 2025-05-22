@@ -15,7 +15,7 @@ namespace prog {
             Invert();
 
             // Destrutor
-            ~Invert() override;
+            ~Invert();
 
             // Função que implementa o comando "invert"
             Image *apply(Image *img) override;

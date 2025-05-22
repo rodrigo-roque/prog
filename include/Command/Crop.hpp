@@ -11,13 +11,13 @@ namespace prog {
     namespace command {
         class Crop : public Command {
         public:
-            // Contrutor padrão com o comando "fill"
+            // Contrutor padrão com o comando "crop"
             Crop(int x, int y, int w, int h);
 
             // Destrutor
-            ~Crop() override;
+            ~Crop();
 
-            // Função que implementa o comando "fill"
+            // Função que implementa o comando "crop"
             Image *apply(Image *img) override;
 
             // Função de conversão para string

@@ -14,7 +14,7 @@ namespace prog {
         class Fill : public Command {
         public:
             // Contrutor padrão com o comando "fill"
-            Fill(int x, int y, int w, int h, Color &RGB_values);
+            Fill(int x, int y, int w, int h, Color &fill_color);
 
             // Destrutor
             ~Fill();
@@ -30,7 +30,7 @@ namespace prog {
             int y_; // Valor da coordenada y do pixel do canto superior esquerdo
             int w_; // Largura de limite de preenchimento
             int h_; // Altura de limite de preenchimento
-            Color RGB_values_; //Cor nova a alterar
+            Color fill_color_; //Cor nova a alterar
         };
     }
 }

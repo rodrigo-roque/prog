@@ -5,14 +5,14 @@
 namespace prog {
     namespace command {
         // Construtor com o comando chain
-        Chain::Chain(const std::vector<std::string>& files): Command("Chain"), files(files) {}
+        Chain::Chain(const std::vector<std::string>& files): Command("Chain"), files_(files) {}
 
         // Destrutor
         Chain::~Chain() {}
 
         // Helper Function usada para verificar se um ficheiro já foi utilizado no chain evitando um loop infito
         bool already_used (const std::vector<std::string>& used_files, const std::string& file) {
-                for (auto file_:used_files) { // Itera sobre o vetor dos ficheiros que já foram utilizados
+                for (auto file_: used_files) { // Itera sobre o vetor dos ficheiros que já foram utilizados
                     if (file_ == file) return true; // Se o ficheiro já foi utilizado, retorna true
                 }
                 return false;// Se não foi utilizado retorna false
@@ -22,7 +22,7 @@ namespace prog {
         Image* Chain::apply(Image* img) {
             std::vector<std::string> used_files; // Vetor de ficheiros que já foram utilizados no chain para evitar loops infinitos
 
-            for (auto file:files) { // Itera sobre os ficheiros do chain
+            for (auto file: files_) { // Itera sobre os ficheiros do chain
                 if (already_used(used_files, file)) { // Verifica se este ficheiro já foi utilizado para evitar loops infinitos.
                     continue; // Se já foi utilizado, passa para o próximo.
                 }
@@ -31,14 +31,14 @@ namespace prog {
                 Scrim* scrim = parser.parseScrim(file); // Utiliza o parser para ler o ficheiro
 
                 std::vector<Command*> commands = scrim->getCommands(); // Obtem os comandos do scrim e armazena num vector
-                for (auto command:commands) { // Itera sobre os comandos do vetor
+                for (auto command : commands) { // Itera sobre os comandos do vetor
                     std::string command_name = command->name(); // Obtem o nome do comando.
                     if (command_name == "Save" || command_name == "Blank" || command_name == "Open") {
                         continue; // Ignora os comandos de "save", "blank" e "open".
                     }
                     if (command_name == "Chain") { // Se for um comando de "chain" temos um nested chain
                         Chain* chain_command = (Chain*)command; // Converte o comando para um tipo de Chain
-                        for (auto nested_file:  chain_command->files) { // Itera sobre os ficheiros do nested chain
+                        for (auto nested_file:  chain_command->files_) { // Itera sobre os ficheiros do nested chain
                             if (already_used(used_files, nested_file)) { // Verifica se este ficheiro já foi utilizado para evitar loops infinitos.
                                 continue; // Se já foi utilizado, passa para o próximo.
                             }
@@ -74,7 +74,7 @@ namespace prog {
         std::string Chain::toString() const {
             std::ostringstream ss;
             ss << "Chain: ";
-            for (auto file: files) ss << file << " ";
+            for (auto file: files_) ss << file << " ";
             return ss.str();
         }
     }

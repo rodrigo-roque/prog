@@ -23,7 +23,7 @@ namespace prog {
 
 
         private:
-            std::vector<std::string> files; // Lista de ficheiros a serem processados
+            std::vector<std::string> files_; // Lista de ficheiros a serem processados
         };
     }
 }

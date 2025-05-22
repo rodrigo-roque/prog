@@ -8,9 +8,9 @@ namespace prog {
 
     class Color {
     private:
-        rgb_value red_value; // Valor de vermelho
-        rgb_value green_value; // Valor de verde
-        rgb_value blue_value; // Valor de azul
+        rgb_value red_value_; // Valor de vermelho
+        rgb_value green_value_; // Valor de verde
+        rgb_value blue_value_; // Valor de azul
 
     public:
         Color(); // Construtor vazio

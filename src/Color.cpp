@@ -6,48 +6,48 @@ using std::istream;
 namespace prog {
     // Construtor vazio (atribui 0 ao valor de vermelho, verde e azul)
     Color::Color() {
-        this->red_value=0;
-        this->green_value=0;
-        this->blue_value=0;
+        this->red_value_=0;
+        this->green_value_=0;
+        this->blue_value_=0;
     }
     // Construtor cópia (atribui os mesmos valores da Cor que quer copiar ao vermelho, verde e azul)
     Color::Color(const Color &other) {
-        red_value=other.red_value;
-        green_value=other.green_value;
-        blue_value=other.blue_value;
+        red_value_=other.red_value_;
+        green_value_=other.green_value_;
+        blue_value_=other.blue_value_;
     }
 
     // Construtor padrão
     Color::Color(rgb_value red, rgb_value green, rgb_value blue) {
-        red_value=red; // Atribui o valor "red", ao valor vermelho
-        green_value=green; // Atribui o valor "green", ao valor verde
-        blue_value=blue; // Atribui o valor "blue" ao valor azul
+        red_value_=red; // Atribui o valor "red", ao valor vermelho
+        green_value_=green; // Atribui o valor "green", ao valor verde
+        blue_value_=blue; // Atribui o valor "blue" ao valor azul
     }
 
     rgb_value Color::red() const {
-        return red_value; // Retorna o valor de vermelho
+        return red_value_; // Retorna o valor de vermelho
     }
 
     rgb_value Color::green() const {
-        return green_value; // Retorna o valor de verde
+        return green_value_; // Retorna o valor de verde
     }
 
     rgb_value Color::blue() const {
-        return blue_value; // Retorna  o valor de azul
+        return blue_value_; // Retorna  o valor de azul
     }
 
 
 
     rgb_value &Color::red() {
-        return red_value; // Retorna  o valor de vermelho
+        return red_value_; // Retorna  o valor de vermelho
     }
 
     rgb_value &Color::green() {
-        return green_value; // Retorna  o valor de verde
+        return green_value_; // Retorna  o valor de verde
     }
 
     rgb_value &Color::blue() {
-        return blue_value; // Retorna  o valor de azul
+        return blue_value_; // Retorna  o valor de azul
     }
 }
 

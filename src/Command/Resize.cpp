@@ -11,7 +11,7 @@ namespace prog {
 
     namespace command {
         // Contrutor padrão com o comando "resize"
-        Resize::Resize(int x, int y, int w, int h) : Command("resize"), x_(x), y_(y), w_(w), h_(h) {}
+        Resize::Resize(int x, int y, int w, int h) : Command("Resize"), x_(x), y_(y), w_(w), h_(h) {}
 
         // Destrutor
         Resize::~Resize() {};

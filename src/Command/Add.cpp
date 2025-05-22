@@ -14,7 +14,7 @@ namespace prog {
 
     namespace command {
         // Construtor padrão com o comando "Add", ficheiro, cor neutra e posição x, y
-        Add::Add(std::string filename, Color &neutral, int x, int y) : Command("Add"), filename(filename), neutral(neutral), x(x), y(y)   {}
+        Add::Add(std::string filename, Color &neutral, int x, int y) : Command("Add"), filename(filename), neutral_(neutral), x_(x), y_(y)   {}
 
         // Destrutor
         Add::~Add() {};
@@ -27,17 +27,17 @@ namespace prog {
             int src_w = nova->width(); // Guarda a largura da imagem a adicionar
             int src_h = nova->height(); // Guarda a altura da imagem a adicionar
 
-            for (int j = 0; j < src_h; ++j) { //Percorre as linhas da imagem que queremos adicionar
-                for (int i = 0; i < src_w; ++i) { //Percorre as colunas da imagem que queremos adicionar
-                    Color pixel = nova->at(i, j); //Obtém o pixel da mesma
+            for (int y = 0; y < src_h; y++) { //Percorre as linhas da imagem que queremos adicionar
+                for (int x = 0; x < src_w; x++) { //Percorre as colunas da imagem que queremos adicionar
+                    Color pixel = nova->at(x, y); //Obtém o pixel da mesma
 
                     // Ignora pixeis neutros
-                    if (pixel.red() == neutral.red() && pixel.green() == neutral.green() && pixel.blue() == neutral.blue())
+                    if (pixel.red() == neutral_.red() && pixel.green() == neutral_.green() && pixel.blue() == neutral_.blue())
                         continue;
 
                     // Calcula posição destino
-                    int dest_x = x + i;
-                    int dest_y = y + j;
+                    int dest_x = x_ + x;
+                    int dest_y = y_ + y;
 
                     // Verifica se está dentro dos limites da imagem de destino
                     if (dest_x >= 0 && dest_x < dest_w && dest_y >= 0 && dest_y < dest_h) {
@@ -51,7 +51,7 @@ namespace prog {
         // Função que converte o comando para string
         std::string Add::toString() const {
             std::ostringstream ss;
-            ss << name() << " filename:" << filename << " neutral:" << neutral << " x:" << x << " y:" << y;
+            ss << name() << " filename:" << filename << " neutral:" << neutral_ << " x:" << x_ << " y:" << y_;
             return ss.str();
         }
     }

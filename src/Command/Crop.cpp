@@ -11,7 +11,7 @@ namespace prog {
 
     namespace command {
         // Contrutor padrão com o comando "fill"
-        Crop::Crop(int x, int y, int w, int h) : Command("crop"), x_(x), y_(y), w_(w), h_(h) {}
+        Crop::Crop(int x, int y, int w, int h) : Command("Crop"), x_(x), y_(y), w_(w), h_(h) {}
 
         // Destrutor
         Crop::~Crop() {};

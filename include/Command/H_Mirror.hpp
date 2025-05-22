@@ -15,7 +15,7 @@ namespace prog {
             HMirror();
 
             // Destrutor
-            ~HMirror() override;
+            ~HMirror();
 
             // Função que implementa o comando "h_mirror"
             Image *apply(Image *img) override;

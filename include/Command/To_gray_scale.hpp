@@ -2,8 +2,8 @@
 // Created by franc on 03/05/2025.
 //
 
-#ifndef TO_GRAY_SCALE_HPP
-#define TO_GRAY_SCALE_HPP
+#ifndef PROJECT_TO_GRAY_SCALE_HPP
+#define PROJECT_TO_GRAY_SCALE_HPP
 
 #include "Command.hpp"
 
@@ -15,7 +15,7 @@ namespace prog {
             Gray();
 
             // Destrutor
-            ~Gray() override;
+            ~Gray();
 
             // Função que implementa o comando "to_gray_scale"
             Image *apply(Image *img) override;
@@ -23,4 +23,4 @@ namespace prog {
     }
 }
 
-#endif //TO_GRAY_SCALE_HPP
+#endif //PROJECT_TO_GRAY_SCALE_HPP

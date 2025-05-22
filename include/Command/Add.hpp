@@ -26,8 +26,8 @@ namespace prog {
 
         private:
             std::string filename; // Nome do ficheiro da imagem a adicionar
-            Color neutral; // Cor considerada neutra (transparente) na imagem a adicionar
-            int x, y; // Coordenadas de destino (canto superior esquerdo) onde a imagem será adicionada
+            Color neutral_; // Cor considerada neutra (transparente) na imagem a adicionar
+            int x_, y_; // Coordenadas de destino (canto superior esquerdo) onde a imagem será adicionada
 
         };
     }

@@ -13,21 +13,21 @@ namespace prog {
     namespace command {
         class Replace : public Command {
         public:
-            // Contrutor padrão com o comando "replace"
-            Replace(Color& base, Color &to_fill);
+            // Contrutor padrão com o comando "Replace"
+            Replace(Color& base_color, Color &new_color);
 
             // Destrutor
             ~Replace();
 
-            // Função que implementa o comando "replace"
+            // Função que implementa o comando "Replace"
             Image *apply(Image *img) override;
 
             // Função de conversão para string
             std::string toString() const override;
 
         private:
-            Color base_; // Cor base a mudar na imagem
-            Color nova_cor_; // Cor nova a atualizar na imagem
+            Color base_color_; // Cor base a mudar na imagem
+            Color new_color_; // Cor nova a atualizar na imagem
         };
     }
 }

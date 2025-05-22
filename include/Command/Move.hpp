@@ -25,8 +25,8 @@ namespace prog {
             std::string toString() const override;
 
         private:
-            int x_offset; // Número de pixeis a mover para a direita (horizontalmente)
-            int y_offset; // Número de pixeis a mover para baixo (verticalmente)
+            int x_offset_; // Número de pixeis a mover para a direita (horizontalmente)
+            int y_offset_; // Número de pixeis a mover para baixo (verticalmente)
         };
     }
 }

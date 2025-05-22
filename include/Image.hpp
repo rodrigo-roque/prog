@@ -7,9 +7,9 @@
 namespace prog {
     class Image {
     private:
-        int width_value; // Largura da imagem (nº de pixeis na horizontal)
-        int height_value; // Altura da imagem (nº de pixeis na vertical)
-        std::vector <std::vector<Color>> pixels; // Matriz de pixeis
+        int width_value_; // Largura da imagem (nº de pixeis na horizontal)
+        int height_value_; // Altura da imagem (nº de pixeis na vertical)
+        std::vector <std::vector<Color>> pixels_; // Matriz de pixeis
     
 	public:
         // Construtor padrão da imagem

@@ -15,7 +15,7 @@ namespace prog {
             Resize(int x, int y, int w, int h);
 
             // Destrutor
-            ~Resize() override;
+            ~Resize();
 
             // Função que implementa o comando "resize"
             Image *apply(Image *img) override;
