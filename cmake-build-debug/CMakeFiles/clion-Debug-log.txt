@@ -1,4 +1,4 @@
-Cannot generate into \\wsl$\Ubuntu\home\tiagorodrigues\prog\cmake-build-debug
-It is already used for project \home\francisco\prog
+Cannot generate into \\wsl.localhost\Ubuntu\home\rodrigo_roque\prog_final\cmake-build-debug
+It is already used for project \\wsl.localhost\Ubuntu\home\francisco\prog
 
 Please either delete it manually or select another generation directory
